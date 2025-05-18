@@ -1,88 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Payment Reminder</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f6fa;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      background: #ffffff;
-      max-width: 600px;
-      margin: 30px auto;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.08);
-    }
-    .header {
-      background-color: #4a90e2;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    .content {
-      padding: 30px;
-      color: #333;
-    }
-    .footer {
-      background: #f0f0f0;
-      text-align: center;
-      padding: 15px;
-      font-size: 12px;
-      color: #888;
-    }
-    .btn {
-      background-color: #4a90e2;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-      border-radius: 5px;
-    }
-    .details {
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 6px;
-      margin-top: 15px;
-    }
-    .details p {
-      margin: 6px 0;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <h2>Payment Reminder</h2>
-    </div>
-    <div class="content">
-      <p>Hi {{customerName}},</p>
+<p>Hi <strong>{{customerName}}</strong>,</p>
 
-      <p>This is a friendly reminder that your payment is due. Please find the details below:</p>
+<p>This is a friendly reminder that you have an outstanding payment due.</p>
 
-      <div class="details">
-        <p><strong>Invoice Number:</strong> {{invoiceNumber}}</p>
-        <p><strong>Due Date:</strong> {{dueDate}}</p>
-        <p><strong>Amount Due:</strong> {{amountDue}}</p>
-      </div>
+<p>
+  <strong>Invoice Number:</strong> {{invoiceNumber}}<br>
+  <strong>Due Date:</strong> {{dueDate}}<br>
+  <strong>Amount Due:</strong> {{amountDue}}
+</p>
 
-      <p>Please make the payment at your earliest convenience. You can pay by clicking the button below:</p>
+<p>
+  Please take a moment to complete the payment at your earliest convenience.
+  You can use the link below to view and pay your invoice:
+</p>
 
-      <a href="{{paymentLink}}" class="btn">Pay Now</a>
+<p><a href="{{paymentLink}}">{{paymentLink}}</a></p>
 
-      <p>If you have already made the payment, please ignore this message.</p>
+<p>If you have already completed the payment, please disregard this message.</p>
 
-      <p>Thank you,<br/>{{yourCompanyName}}</p>
-    </div>
-    <div class="footer">
-      &copy; {{year}} {{yourCompanyName}}. All rights reserved.
-    </div>
-  </div>
-</body>
-</html>
+<p>Thank you,<br><strong>{{yourCompanyName}}</strong></p>
