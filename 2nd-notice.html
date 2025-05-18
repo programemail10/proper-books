@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Second Payment Notice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f8fc;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background: #ffffff;
+      max-width: 600px;
+      margin: 30px auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+    .header {
+      background-color: #d9534f;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .content {
+      padding: 30px;
+      color: #333;
+    }
+    .footer {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      color: #888;
+    }
+    .btn {
+      background-color: #d9534f;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .details {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 15px;
+    }
+    .details p {
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Second Payment Notice</h2>
+    </div>
+    <div class="content">
+      <p>Hi {{customerName}},</p>
+
+      <p>This is a second notice regarding your outstanding payment. Our records show that payment for the following invoice is still pending:</p>
+
+      <div class="details">
+        <p><strong>Invoice Number:</strong> {{invoiceNumber}}</p>
+        <p><strong>Due Date:</strong> {{dueDate}}</p>
+        <p><strong>Amount Due:</strong> {{amountDue}}</p>
+      </div>
+
+      <p>Please take immediate action to settle the payment. You can use the link below to make the payment online:</p>
+
+      <a href="{{paymentLink}}" class="btn">Pay Now</a>
+
+      <p>If payment has already been made, kindly disregard this notice.</p>
+
+      <p>Thank you for your prompt attention to this matter.<br/>{{yourCompanyName}}</p>
+    </div>
+    <div class="footer">
+      &copy; {{year}} {{yourCompanyName}}. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
